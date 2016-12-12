@@ -1,11 +1,11 @@
 'use strict';
 
-const _ = require('underscore');
+const hbs = require('handlebars')
 
 module.exports = {
   process(src, filename) {
     return `
-      module.exports = "${(src)}";
+      module.exports = ${hbs.precompile(src)};
     `;
   },
 };
