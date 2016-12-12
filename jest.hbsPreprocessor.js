@@ -1,11 +1,11 @@
 'use strict';
 
-const hbs = require('handlebars')
+const hb = require('handlebars')
 
 module.exports = {
   process(src, filename) {
     return `
-      module.exports = ${hbs.precompile(src)};
+      module.exports = ${JSON.stringify(hb.compile(src)({}))}
     `;
   },
 };

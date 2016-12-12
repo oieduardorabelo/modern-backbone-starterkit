@@ -1,13 +1,14 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 import _ from 'lodash';
-import HelloView from './views/hello';
 
+import AboutView from './views/about';
+import DashboardView from './views/dashboard';
 
 export default Backbone.Router.extend({
 
   routes: {
-    '': 'dashboard',
+    'dashboard': 'dashboard',
     'about': 'about'
   },
 
@@ -16,17 +17,11 @@ export default Backbone.Router.extend({
   },
 
   dashboard() {
-    var helloView = new HelloView().render();
-
-    $('#js-app').empty().append(helloView.$el);
+    $('#js-app').empty().append(DashboardView.$el);
   },
 
   about() {
-    var helloView = new HelloView({
-      template: _.template('Im the about page')
-    }).render();
-
-    $('#js-app').empty().append(helloView.$el);
+    $('#js-app').empty().append(AboutView.$el);
   }
 
 });

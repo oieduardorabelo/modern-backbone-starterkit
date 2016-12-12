@@ -1,9 +1,9 @@
 import $ from 'jquery';
 import Marionette from 'backbone.marionette';
 
-import template from './template.hbs';
+import template from './dashboard.hbs';
 
-export default Marionette.ItemView.extend({
+var View = Marionette.ItemView.extend({
 
   template: template,
 
@@ -14,3 +14,5 @@ export default Marionette.ItemView.extend({
   }
 
 });
+
+export default new View().render()

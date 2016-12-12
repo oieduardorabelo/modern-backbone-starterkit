@@ -2,7 +2,7 @@
   "bail": true,
   "verbose": true,
   "collectCoverageFrom": [
-    "app/**/*.js",
+    "src/app/**/*.js",
     "!**/node_modules/**"
   ],
   "testPathDirs": [
