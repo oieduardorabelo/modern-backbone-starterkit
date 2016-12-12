@@ -9,20 +9,21 @@ import Router from '../src/app/router';
 
 describe('Integration tests', function() {
   const router = new Router();
+
   Backbone.history.start();
 
   let $app = $('#js-app');
 
-
   describe('Dashboard page sample testing', function() {
     it('should render hello world on first render', function() {
+      router.navigate('', {trigger: true, replace: true});
       expect($app.text()).to.equal('Hello world!');
     });
   });
 
   describe('About page sample testing', function() {
     it('should render Im the about page', function() {
-      router.navigate('about', {trigger: true, replace: true});
+      router.navigate('/about', {trigger: true, replace: true});
 
       expect($app.text()).to.equal('Im the about page');
     });
