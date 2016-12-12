@@ -2,13 +2,13 @@
   "bail": true,
   "verbose": true,
   "collectCoverageFrom": [
-    "tests/**/*.js",
+    "app/**/*.js",
     "!**/node_modules/**"
   ],
   "testPathDirs": [
     "<rootDir>/tests"
   ],
-  "testRegex": "\\.(js)$",
+  "testRegex": "_test\\.(js)$",
   "transform": {
     "^.+\\.js$": "<rootDir>/jest.jsPreprocessor.js",
     "^.+\\.hbs$": "<rootDir>/jest.hbsPreprocessor.js"
